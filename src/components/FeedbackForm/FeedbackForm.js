@@ -111,7 +111,7 @@ const FeedbackForm = (props) => {
             <span>Bad</span>
           </div>
           <div>
-            <input type="submit" value="Submit Review" />
+            <button type="submit">Submit Review</button>
           </div>
         </div>
       </form>

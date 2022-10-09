@@ -1,9 +1,11 @@
-import FeedbackForm from "./components/FeedbackForm";
+import FeedbackForm from "./components/FeedbackForm/FeedbackForm";
 
 function App() {
-  return <div className="App">
-    <FeedbackForm/>
-  </div>;
+  return (
+    <div className="App">
+      <FeedbackForm />
+    </div>
+  );
 }
 
 export default App;
