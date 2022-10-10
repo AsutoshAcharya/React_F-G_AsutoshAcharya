@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./FeedbackForm.css";
 import { useNavigate } from "react-router-dom";
+import Validations from "../formValidations/Validations";
+import NameValidation from "../formValidations/NameValidation";
+import PhoneValidation from "../formValidations/PhoneValidation";
 const FeedbackForm = (props) => {
   let name, value;
-
   const [data, setData] = useState({
     name: "",
     phone: "",
@@ -23,7 +25,8 @@ const FeedbackForm = (props) => {
 
   const navigate = useNavigate();
 
-  const pageChangeHandler = () => {
+  const pageChangeHandler = (event) => {
+    event.preventDefault();
     if (
       data.name !== "" &&
       data.phone !== "" &&
@@ -33,7 +36,9 @@ const FeedbackForm = (props) => {
       data.beverage !== "" &&
       data.diningExperience !== ""
     ) {
-      navigate("/Confirmation");
+      if (data.email.includes("@")) {
+        navigate("/Confirmation");
+      }
     }
   };
 
@@ -48,6 +53,7 @@ const FeedbackForm = (props) => {
             Customer Name<sup>*</sup>
           </label>
           <input
+            id="name"
             name="name"
             type="text"
             placeholder="E.g.Jon Snow"
@@ -55,10 +61,13 @@ const FeedbackForm = (props) => {
             value={data.name}
             onChange={handleInputs}
           />
+          <br />
+          {data.name === "" && <NameValidation />}
           <label htmlFor="phone">
             Phone<sup>*</sup>
           </label>
           <input
+            id="phone"
             name="phone"
             type="number"
             required
@@ -66,6 +75,8 @@ const FeedbackForm = (props) => {
             value={data.phone}
             onChange={handleInputs}
           />
+          <br />
+          {data.phone === "" && <PhoneValidation />}
           <label htmlFor="qualityOfService">
             Please rate the quality of service you recived from your host.
             <sup>*</sup>
@@ -148,12 +159,14 @@ const FeedbackForm = (props) => {
           </label>
           <input
             name="email"
+            id="email"
             type="email"
             required
             placeholder="E.g:abc@gmail.com"
             value={data.email}
             onChange={handleInputs}
           />
+          {data.email === "" && <Validations />}
           <label htmlFor="beverage">
             please rate the quality of beverage.<sup>*</sup>
           </label>

@@ -47,7 +47,7 @@ input[type="email"] {
   /* position: relative; */
 }
 label {
-  padding-top: 20px;
+  padding-top: 10px;
   padding-bottom: 20px;
   color: rgb(53, 37, 99);
 }
@@ -65,7 +65,6 @@ span {
   color: rgb(20, 42, 59);
 }
 .button {
-  
   background-color: rgb(0, 145, 0);
   border: none;
   border-radius: 5px;
@@ -79,7 +78,7 @@ span {
   background-color: rgb(111, 185, 111);
 }
 
-.btn{
+.btn {
   margin-top: 50px;
   margin-bottom: -45px;
   display: flex;
@@ -97,3 +96,4 @@ span {
   width: 50px;
   height: 50px;
 } */
+
