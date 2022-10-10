@@ -1,0 +1,36 @@
+.confirmation{
+    /* background-color: red; */
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 450px;
+   position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+}
+.btn2{
+    padding:7px;
+    margin-top: 1rem;
+    width:6rem;
+    background-color:rgb(136, 112, 201);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.btn2:hover{
+    background-color:rgb(180, 153, 255);
+    transform: scale(1.05);
+    transition: transform 330ms ease-in-out;
+}
+
+.confirmation>h3{
+    color: RGB(64, 75, 105);
+}
+.confirmation>p{
+    color:grey;
+    margin-top: -15px;
+}

@@ -1,10 +1,12 @@
 import React from "react";
 import "./FeedbackForm.css";
+// import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 const FeedbackForm = (props) => {
   return (
     <div>
       <header>
         <h1>Aromatic Bar</h1>
+        {/* <div className="ico"><CheckCircleIcon className="c1"/></div> */}
       </header>
       <form className="review-form">
         <div className="form left">
@@ -110,8 +112,8 @@ const FeedbackForm = (props) => {
             />
             <span>Bad</span>
           </div>
-          <div>
-            <button type="submit">Submit Review</button>
+          <div className="btn">
+            <button type="submit" className="button">Submit Review</button>
           </div>
         </div>
       </form>
