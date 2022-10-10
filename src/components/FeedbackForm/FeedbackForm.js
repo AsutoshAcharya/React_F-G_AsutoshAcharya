@@ -14,6 +14,7 @@ const FeedbackForm = (props) => {
     email: "",
     beverage: "",
     diningExperience: "",
+    id: Math.random(),
   });
 
   const handleInputs = (e) => {
@@ -37,6 +38,11 @@ const FeedbackForm = (props) => {
       data.diningExperience !== ""
     ) {
       if (data.email.includes("@")) {
+        // storing data in local storage
+        localStorage.setItem(data.id, JSON.stringify(data));
+
+        // navigation
+
         navigate("/Confirmation");
       }
     }
