@@ -1,4 +1,3 @@
-import * as React from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -6,6 +5,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import DetailsHeader from "../DetailsHeader/DetailsHeader";
 
 function Details() {
   function allStorage() {
@@ -22,8 +22,10 @@ function Details() {
   const rows = allStorage();
 
   return (
-    <TableContainer component={Paper}>
-      <Table sx={{ Width:'150%', height: "30%" }} aria-label="simple table">
+    <div>
+      <DetailsHeader data={rows}/>
+    <TableContainer component={Paper} >
+      <Table sx={{ width:'150%', height: "40vh" }} aria-label="simple table">
         <TableHead>
           <TableRow sx={{backgroundColor:'rgb(239, 233, 251)'}}>
             <TableCell align="center">
@@ -34,7 +36,7 @@ function Details() {
             <TableCell align="center">Email</TableCell>
             <TableCell align="center">Phone</TableCell>
             <TableCell align="center">
-              Please rate the quality of service you recived from host
+              Please rate the quality of service you received from host
             </TableCell>
             <TableCell align="center">
               Please rate the quality of beverage
@@ -69,6 +71,7 @@ function Details() {
         </TableBody>
       </Table>
     </TableContainer>
+    </div>
   );
 }
 

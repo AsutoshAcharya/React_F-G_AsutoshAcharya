@@ -84,7 +84,7 @@ const FeedbackForm = (props) => {
           <br />
           {data.phone === "" && <PhoneValidation />}
           <label htmlFor="qualityOfService">
-            Please rate the quality of service you recived from your host.
+            Please rate the quality of service you received from your host.
             <sup>*</sup>
           </label>
           <div>

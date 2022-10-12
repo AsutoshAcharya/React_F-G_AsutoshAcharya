@@ -1,0 +1,42 @@
+.heading {
+  display: flex;
+  /* background-color: red; */
+  justify-content: space-between;
+}
+.input-field {
+  margin-top: 1px;
+  width: 15rem;
+  padding: 12px;
+}
+.input-icons {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: green; */
+  height: 35px;
+  padding: 10px;
+  margin-top: 45px;
+  position: relative;
+}
+.add-new {
+  background-color: rgb(72, 164, 76);
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 25%;
+  border-radius: 5px;
+}
+.refresh {
+  border: none;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.icon {
+  position: absolute;
+  left: 15.5rem;
+}
+.heading>div:first-child{
+/* background-color: red; */
+padding: 15px;
+}
