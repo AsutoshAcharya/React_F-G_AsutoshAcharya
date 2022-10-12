@@ -1,8 +1,11 @@
-// import { TableHead } from "@mui/material";
-import React from "react";
-// import { useMemo } from "react";
-// import { useTable } from "react-table";
-// import MaterialTable from '@mui/icons-material';
+import * as React from "react";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 
 function Details() {
   function allStorage() {
@@ -16,46 +19,57 @@ function Details() {
 
     return values;
   }
-  const data = allStorage();
-  console.log(data);
-  console.log(data.length);
+  const rows = allStorage();
 
-  const columns = [
-    
-    {
-      title: "Customer Name",
-      field: "name",
-    },
-    {
-      title: "Email",
-      field: "email",
-    },
-    {
-      title: "Phone",
-      field: "phone",
-    },
-    {
-      title: "Please rate the quality of service you recived from host",
-      field: "qualityOfService",
-    },
-    {
-      title: "Please rate the quality of beverage",
-      field: "beverage",
-    },
-    {
-      title: "Please rate the overall dining experience",
-      field: "diningExperience",
-    },
-    {
-      title: "Was our restaurant clean?",
-      field: "cleanliness",
-    },
-  ];
-  return <div>
-    sdsadsd
-{/* <MaterialTable data={data} columns={columns}/> */}
-
-  </div>;
+  return (
+    <TableContainer component={Paper}>
+      <Table sx={{ Width:'150%', height: "30%" }} aria-label="simple table">
+        <TableHead>
+          <TableRow sx={{backgroundColor:'rgb(239, 233, 251)'}}>
+            <TableCell align="center">
+              <input type="checkbox" name="" id="" />
+            </TableCell>
+            <TableCell align="center">Form Details</TableCell>
+            <TableCell align="center">Customer Name</TableCell>
+            <TableCell align="center">Email</TableCell>
+            <TableCell align="center">Phone</TableCell>
+            <TableCell align="center">
+              Please rate the quality of service you recived from host
+            </TableCell>
+            <TableCell align="center">
+              Please rate the quality of beverage
+            </TableCell>
+            <TableCell align="center">
+              Please rate the quality of overall dining experience
+            </TableCell>
+            <TableCell align="center">Was our restaurant clean?</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.id}
+              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+            >
+              <TableCell>
+                <input type="checkbox" name="" id="" />
+              </TableCell>
+              <TableCell sx={{color:''}}>View Details</TableCell>
+              <TableCell>{row.name}</TableCell>
+              <TableCell component="th" scope="row">
+                {row.email}
+              </TableCell>
+              <TableCell align="center">{row.phone}</TableCell>
+              <TableCell align="center">{row.qualityOfService}</TableCell>
+              <TableCell align="center">{row.beverage}</TableCell>
+              <TableCell align="center">{row.diningExperience}</TableCell>
+              <TableCell align="center">{row.cleanliness}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
 }
 
 export default Details;
