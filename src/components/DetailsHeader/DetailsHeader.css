@@ -25,6 +25,7 @@
   height: 30px;
   width: 25%;
   border-radius: 5px;
+  cursor: pointer;
 }
 .refresh {
   border: none;
