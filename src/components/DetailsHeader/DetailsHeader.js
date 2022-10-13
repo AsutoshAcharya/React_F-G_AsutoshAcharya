@@ -2,11 +2,17 @@ import React from "react";
 import "./DetailsHeader.css";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import RefreshIcon from "@mui/icons-material/Refresh";
+import { useNavigate } from "react-router-dom";
 
 function DetailsHeader(props) {
   // const [searchTerm, setSearchTerm] = useState("");
   const refreshPage = () => {
     window.location.reload(false);
+  };
+  const navigate = useNavigate();
+
+  const pageChangeHandler = (e) => {
+    navigate("/");
   };
 
   return (
@@ -25,12 +31,12 @@ function DetailsHeader(props) {
           onChange={props.getData}
         />
         <SearchRoundedIcon className="icon" />
-        <button
-          className="refresh"
-          onClick={refreshPage}>
+        <button className="refresh" onClick={refreshPage}>
           <RefreshIcon className="refresh" />
         </button>
-        <button className="add-new">Add New</button>
+        <button className="add-new" onClick={pageChangeHandler}>
+          Add New
+        </button>
       </div>
     </div>
   );

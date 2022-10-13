@@ -10,7 +10,7 @@
   background: linear-gradient(to right, #9fcefb, #47e1ab);
   box-shadow: 0px 0px 8px rgba(131, 183, 255, 0.65);
 }
-header {
+.header {
   margin-left: 33px;
   background: linear-gradient(to right, #9fcefb, #47e1ab);
   font-size: 500;
@@ -46,7 +46,7 @@ input[type="email"] {
   padding: 50px;
   /* position: relative; */
 }
-label {
+.label {
   padding-top: 10px;
   padding-bottom: 20px;
   color: rgb(53, 37, 99);
@@ -60,7 +60,7 @@ input[type="radio"] {
   height: 15px;
   border: 1px solid black;
 }
-span {
+.span {
   padding-right: 50px;
   color: rgb(20, 42, 59);
 }
@@ -85,17 +85,7 @@ span {
   justify-content: flex-end;
   /* background-color: red; */
 }
-/* .c1{
-  background-color:white;
-  color:green;
-  size: inherit;
-}
-.ico{
-  background-color: red;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-} */
+
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -103,10 +93,4 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-/* .button:disabled
- {
-  background: #ccc;
-  border-color: #ccc;
-  color: #666666;
-  cursor: not-allowed;
-} */
+
